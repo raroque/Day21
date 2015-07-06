@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83A064401B4A37A7000ADF66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0643F1B4A37A7000ADF66 /* AppDelegate.swift */; };
+		83A064431B4A37A7000ADF66 /* Rabbit_Food.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83A064411B4A37A7000ADF66 /* Rabbit_Food.xcdatamodeld */; };
+		83A064451B4A37A7000ADF66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A064441B4A37A7000ADF66 /* ViewController.swift */; };
+		83A064481B4A37A7000ADF66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A064461B4A37A7000ADF66 /* Main.storyboard */; };
+		83A0644A1B4A37A7000ADF66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A064491B4A37A7000ADF66 /* Images.xcassets */; };
+		83A0644D1B4A37A7000ADF66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A0644B1B4A37A7000ADF66 /* LaunchScreen.xib */; };
+		83A064591B4A37A7000ADF66 /* Rabbit_FoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A064581B4A37A7000ADF66 /* Rabbit_FoodTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83A064531B4A37A7000ADF66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83A064321B4A37A7000ADF66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83A064391B4A37A7000ADF66;
+			remoteInfo = "Rabbit Food";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		83A0643A1B4A37A7000ADF66 /* Rabbit Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rabbit Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A0643E1B4A37A7000ADF66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83A0643F1B4A37A7000ADF66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		83A064421B4A37A7000ADF66 /* Rabbit_Food.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rabbit_Food.xcdatamodel; sourceTree = "<group>"; };
+		83A064441B4A37A7000ADF66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83A064471B4A37A7000ADF66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83A064491B4A37A7000ADF66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		83A0644C1B4A37A7000ADF66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		83A064521B4A37A7000ADF66 /* Rabbit FoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rabbit FoodTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A064571B4A37A7000ADF66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83A064581B4A37A7000ADF66 /* Rabbit_FoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rabbit_FoodTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83A064371B4A37A7000ADF66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A0644F1B4A37A7000ADF66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83A064311B4A37A7000ADF66 = {
+			isa = PBXGroup;
+			children = (
+				83A0643C1B4A37A7000ADF66 /* Rabbit Food */,
+				83A064551B4A37A7000ADF66 /* Rabbit FoodTests */,
+				83A0643B1B4A37A7000ADF66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83A0643B1B4A37A7000ADF66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83A0643A1B4A37A7000ADF66 /* Rabbit Food.app */,
+				83A064521B4A37A7000ADF66 /* Rabbit FoodTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83A0643C1B4A37A7000ADF66 /* Rabbit Food */ = {
+			isa = PBXGroup;
+			children = (
+				83A0643F1B4A37A7000ADF66 /* AppDelegate.swift */,
+				83A064441B4A37A7000ADF66 /* ViewController.swift */,
+				83A064461B4A37A7000ADF66 /* Main.storyboard */,
+				83A064491B4A37A7000ADF66 /* Images.xcassets */,
+				83A0644B1B4A37A7000ADF66 /* LaunchScreen.xib */,
+				83A064411B4A37A7000ADF66 /* Rabbit_Food.xcdatamodeld */,
+				83A0643D1B4A37A7000ADF66 /* Supporting Files */,
+			);
+			path = "Rabbit Food";
+			sourceTree = "<group>";
+		};
+		83A0643D1B4A37A7000ADF66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83A0643E1B4A37A7000ADF66 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83A064551B4A37A7000ADF66 /* Rabbit FoodTests */ = {
+			isa = PBXGroup;
+			children = (
+				83A064581B4A37A7000ADF66 /* Rabbit_FoodTests.swift */,
+				83A064561B4A37A7000ADF66 /* Supporting Files */,
+			);
+			path = "Rabbit FoodTests";
+			sourceTree = "<group>";
+		};
+		83A064561B4A37A7000ADF66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83A064571B4A37A7000ADF66 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83A064391B4A37A7000ADF66 /* Rabbit Food */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83A0645C1B4A37A7000ADF66 /* Build configuration list for PBXNativeTarget "Rabbit Food" */;
+			buildPhases = (
+				83A064361B4A37A7000ADF66 /* Sources */,
+				83A064371B4A37A7000ADF66 /* Frameworks */,
+				83A064381B4A37A7000ADF66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rabbit Food";
+			productName = "Rabbit Food";
+			productReference = 83A0643A1B4A37A7000ADF66 /* Rabbit Food.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83A064511B4A37A7000ADF66 /* Rabbit FoodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83A0645F1B4A37A7000ADF66 /* Build configuration list for PBXNativeTarget "Rabbit FoodTests" */;
+			buildPhases = (
+				83A0644E1B4A37A7000ADF66 /* Sources */,
+				83A0644F1B4A37A7000ADF66 /* Frameworks */,
+				83A064501B4A37A7000ADF66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83A064541B4A37A7000ADF66 /* PBXTargetDependency */,
+			);
+			name = "Rabbit FoodTests";
+			productName = "Rabbit FoodTests";
+			productReference = 83A064521B4A37A7000ADF66 /* Rabbit FoodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83A064321B4A37A7000ADF66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = AloaLabs;
+				TargetAttributes = {
+					83A064391B4A37A7000ADF66 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					83A064511B4A37A7000ADF66 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 83A064391B4A37A7000ADF66;
+					};
+				};
+			};
+			buildConfigurationList = 83A064351B4A37A7000ADF66 /* Build configuration list for PBXProject "Rabbit Food" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83A064311B4A37A7000ADF66;
+			productRefGroup = 83A0643B1B4A37A7000ADF66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83A064391B4A37A7000ADF66 /* Rabbit Food */,
+				83A064511B4A37A7000ADF66 /* Rabbit FoodTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83A064381B4A37A7000ADF66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A064481B4A37A7000ADF66 /* Main.storyboard in Resources */,
+				83A0644D1B4A37A7000ADF66 /* LaunchScreen.xib in Resources */,
+				83A0644A1B4A37A7000ADF66 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A064501B4A37A7000ADF66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83A064361B4A37A7000ADF66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A064451B4A37A7000ADF66 /* ViewController.swift in Sources */,
+				83A064401B4A37A7000ADF66 /* AppDelegate.swift in Sources */,
+				83A064431B4A37A7000ADF66 /* Rabbit_Food.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A0644E1B4A37A7000ADF66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A064591B4A37A7000ADF66 /* Rabbit_FoodTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83A064541B4A37A7000ADF66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83A064391B4A37A7000ADF66 /* Rabbit Food */;
+			targetProxy = 83A064531B4A37A7000ADF66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		83A064461B4A37A7000ADF66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83A064471B4A37A7000ADF66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		83A0644B1B4A37A7000ADF66 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83A0644C1B4A37A7000ADF66 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83A0645A1B4A37A7000ADF66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83A0645B1B4A37A7000ADF66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83A0645D1B4A37A7000ADF66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Rabbit Food/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		83A0645E1B4A37A7000ADF66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Rabbit Food/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		83A064601B4A37A7000ADF66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Rabbit FoodTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rabbit Food.app/Rabbit Food";
+			};
+			name = Debug;
+		};
+		83A064611B4A37A7000ADF66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Rabbit FoodTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rabbit Food.app/Rabbit Food";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83A064351B4A37A7000ADF66 /* Build configuration list for PBXProject "Rabbit Food" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83A0645A1B4A37A7000ADF66 /* Debug */,
+				83A0645B1B4A37A7000ADF66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83A0645C1B4A37A7000ADF66 /* Build configuration list for PBXNativeTarget "Rabbit Food" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83A0645D1B4A37A7000ADF66 /* Debug */,
+				83A0645E1B4A37A7000ADF66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		83A0645F1B4A37A7000ADF66 /* Build configuration list for PBXNativeTarget "Rabbit FoodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83A064601B4A37A7000ADF66 /* Debug */,
+				83A064611B4A37A7000ADF66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		83A064411B4A37A7000ADF66 /* Rabbit_Food.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				83A064421B4A37A7000ADF66 /* Rabbit_Food.xcdatamodel */,
+			);
+			currentVersion = 83A064421B4A37A7000ADF66 /* Rabbit_Food.xcdatamodel */;
+			path = Rabbit_Food.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 83A064321B4A37A7000ADF66 /* Project object */;
+}
