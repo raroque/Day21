@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Day" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="exercise" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="food" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grat1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grat2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grat3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="meditation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="post1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="post2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raok" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Day" positionX="-63" positionY="-18" width="128" height="195"/>
+    </elements>
+</model>
