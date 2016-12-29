@@ -2,7 +2,7 @@
 //  SingleDay.swift
 //  Rabbit Food
 //
-//  Created by Chris on 7/7/15.
+//  Created by Christian Raroque on 7/8/15.
 //  Copyright (c) 2015 AloaLabs. All rights reserved.
 //
 

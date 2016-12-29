@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Rabbit Food
 //
-//  Created by Chris on 7/5/15.
+//  Created by Christian on 7/5/15.
 //  Copyright (c) 2015 AloaLabs. All rights reserved.
 //
 

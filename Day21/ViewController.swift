@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Rabbit Food
 //
-//  Created by Chris on 7/5/15.
+//  Created by Christian Raroque on 7/5/15.
 //  Copyright (c) 2015 AloaLabs. All rights reserved.
 //
 
@@ -14,12 +14,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var rabbitTable: UITableView!
     @IBOutlet weak var completeMessage: UIImageView!
     
-    var food = ["Gratitude 1", "Gratitude 2", "Gratitude 3", "Positive Experience 1", "Positive Experience 2", "Exercise", "Food", "Meditation", "Random Act of Kindness"]
+    var field = ["Gratitude 1", "Gratitude 2", "Gratitude 3", "Positive Experience 1", "Positive Experience 2", "Exercise", "Food", "Meditation", "Random Act of Kindness"]
     var placeHolders = ["What are you grateful for?", "What are you grateful for?", "What are you grateful for?", "What is a positive experience you had today?", "What is a positive experience you had today?", "What exercise did you do today?", "How was your diet today, what did you eat?", "What form of meditation did you do today?", "What was your random act of kindness"]
+    
+    // typeKeys are the keys coredata will use
     var typeKeys = ["grat1", "grat2", "grat3", "post1", "post2", "exercise", "food", "meditation", "raok"]
     var previousEntries = ["","","","","","","","",""]
     var colors = [UIColor]()
     var textColors = [UIColor]()
+    
+    // A boolean to determine whether or not to mark the field as completed
     var strikeThroughValues = [Bool]()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,8 +52,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.view .addGestureRecognizer(recognizer)
     }
     
+    // Although loaded above, you can make custom instances of this function to change the fields that appear in the app
+    
     func loadFields() {
-        food = ["Gratitude 1", "Gratitude 2", "Gratitude 3", "Positive Experience 1", "Positive Experience 2", "Exercise", "Food", "Meditation", "Random Act of Kindness"]
+        field = ["Gratitude 1", "Gratitude 2", "Gratitude 3", "Positive Experience 1", "Positive Experience 2", "Exercise", "Food", "Meditation", "Random Act of Kindness"]
         placeHolders = ["What are you grateful for?", "What are you grateful for?", "What are you grateful for?", "What is a positive experience you had today?", "What is a positive experience you had today?", "What exercise did you do today?", "How was your diet today, what did you eat?", "What form of meditation did you do today?", "What was your random act of kindness"]
         typeKeys = ["grat1", "grat2", "grat3", "post1", "post2", "exercise", "food", "meditation", "raok"]
         previousEntries = ["","","","","","","","",""]
@@ -58,14 +64,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         strikeThroughValues = [Bool]()
     }
     
+    // Sort through the existing core data and see if any entries have already been
+    // made for the day
+    
     func sortData() {
-        NSLog("sort data is called")
         // The day today (start of the day)
-        var today = Date()
-        var cal = NSCalendar(identifier: NSCalendar.Identifier.gregorian)
+        let today = Date()
+        let cal = NSCalendar(identifier: NSCalendar.Identifier.gregorian)
         let startOfDay = cal!.startOfDay(for: today)
 
-        // Done posting
         let appDelegate =
         UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext!
@@ -80,12 +87,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do {
             let results =
                 try managedContext.fetch(fetchRequest)
-            var entries = results as! [NSManagedObject]
             if(results.count != 0) {
                 NSLog("the results is not 0")
                 let lastDay = results[0]
-                //   managedContext.deleteObject(lastDay as NSManagedObject)
-                //   managedContext.save(nil)
                 
                 if let dateOfLastEntry = (lastDay as AnyObject).value(forKey: "date") as? NSDate {
                     // Check if there is an entry
@@ -94,20 +98,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         NSLog("something exists")
                         // Something already exists, so update it instead of creating a new entry
                         let day = lastDay
-                        var attributes = (day as AnyObject).entity.attributesByName
+                        let attributes = (day as AnyObject).entity.attributesByName
                         for (key, value) in attributes {
                             if let value = (day as AnyObject).value(forKey: key) as? NSString {
-                                var index = typeKeys.index(of: key)
+                                
+                                // Index of the typekey (used as the main key that the other arrays follow)
+                                let index = typeKeys.index(of: key)
                                 if(index != nil) {
-                                    
-                                    NSLog("something was crossed out \(value)")
+                                    // Since the index is not null, that means a typeKey exists in coredata for this day. That means this field has been filled out and we can cross it out
                                     
                                     self.colors[index!] = colorWithHexString("#ffffff")
                                     self.textColors[index!] = colorWithHexString("#000000")
                                     self.strikeThroughValues[index!] = true
                                     self.previousEntries[index!] = value as String
                                     
-                                    self.food.insert(self.food.remove(at: index!), at: self.food.count)
+                                    self.field.insert(self.field.remove(at: index!), at: self.field.count)
                                     self.colors.insert(self.colors.remove(at: index!), at: self.colors.count)
                                     self.textColors.insert(self.textColors.remove(at: index!), at: self.textColors.count)
                                     self.strikeThroughValues.insert(self.strikeThroughValues.remove(at: index!), at: self.strikeThroughValues.count)
@@ -138,7 +143,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func loadColors() {
         self.colors.removeAll(keepingCapacity: false)
         let colorGenerator = ColorGenerator(hue: 0.5, saturation: 0.8, brightness: 0.9, alpha: 1.0, increment: 0.04)
-        for _ in food {
+        for _ in field {
+            // This loads it as a...gradient...I think that's the word...probably not
             self.colors.append(colorGenerator.next()!)
             
             self.strikeThroughValues.append(false)
@@ -155,7 +161,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return  self.food.count
+        return  self.field.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -167,7 +173,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             newEntry.hexmain = self.colors[(indexPath as NSIndexPath).row]
         }
         
-        newEntry.type = self.food[(indexPath as NSIndexPath).row]
+        newEntry.type = self.field[(indexPath as NSIndexPath).row]
         newEntry.typeKey = self.typeKeys[(indexPath as NSIndexPath).row]
         newEntry.placeHolderText = self.placeHolders[(indexPath as NSIndexPath).row]
         
@@ -179,7 +185,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! MainCell
         cell.selectionStyle = .none
-        let item = self.food[(indexPath as NSIndexPath).row]
+        let item = self.field[(indexPath as NSIndexPath).row]
         cell.backgroundColor = colors[(indexPath as NSIndexPath).row]
         
         var strike = 0
@@ -195,47 +201,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.food.attributedText = NSAttributedString(string: "\(item)", attributes: attributes)
         
-      //  var longHold: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "completeTask:")
-      //  cell.addGestureRecognizer(longHold)
-        
         return cell
     }
     
-
-    /*
-    func completeTask(sender: AnyObject) {
-        
-        if sender.state == UIGestureRecognizerState.Began {
-            let cell = sender.view as! MainCell
-            let indexPath = (self.rabbitTable as UITableView).indexPathForCell(cell)!
-            
-            if(!self.strikeThroughValues[indexPath.row]) {
-                self.colors[indexPath.row] = colorWithHexString("#ffffff")
-                self.textColors[indexPath.row] = colorWithHexString("#000000")
-                self.strikeThroughValues[indexPath.row] = true
-                
-                self.colors.insert(self.colors.removeAtIndex(indexPath.row), atIndex: self.colors.count)
-                self.textColors.insert(self.textColors.removeAtIndex(indexPath.row), atIndex: self.textColors.count)
-                self.strikeThroughValues.insert(self.strikeThroughValues.removeAtIndex(indexPath.row), atIndex: self.strikeThroughValues.count)
-                self.placeHolders.insert(self.placeHolders.removeAtIndex(indexPath.row), atIndex: self.placeHolders.count)
-                self.typeKeys.insert(self.typeKeys.removeAtIndex(indexPath.row), atIndex: self.typeKeys.count)
-                self.rabbitTable.reloadData()
-                
-                rabbitTable.beginUpdates()
-                
-                
-                rabbitTable.moveRowAtIndexPath(indexPath, toIndexPath: NSIndexPath(forRow: self.food.count - 1, inSection: 0))
-                self.food.insert(self.food.removeAtIndex(indexPath.row), atIndex: self.food.count)
-                
-                rabbitTable.endUpdates()
-                checkIfClear()
-            }
-            
-        }
-    } */
-    
     func checkIfClear() {
-        // Check if they are all clear
+        // Check if they are all clear, if they are then show the completed message
         var allClear = true
         
         for strike in self.strikeThroughValues {
@@ -247,13 +217,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if(allClear) {
             rabbitTable.beginUpdates()
             
-            let foodCount = self.food.count
-            for i in stride(from: foodCount - 1,to: 0, by: -1) {
+            let fieldCount = self.field.count
+            for i in stride(from: fieldCount - 1,to: 0, by: -1) {
             
                 self.rabbitTable.deleteRows(at: [IndexPath(row: i, section: 0)], with: UITableViewRowAnimation.fade)
                 self.colors.remove(at: i)
                 self.textColors.remove(at: i)
-                self.food.remove(at: i)
+                self.field.remove(at: i)
                 self.placeHolders.remove(at: i)
                 self.typeKeys.remove(at: i)
                 self.previousEntries.remove(at: i)
