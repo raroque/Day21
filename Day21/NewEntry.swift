@@ -39,9 +39,6 @@ class NewEntry: UIViewController, UITextViewDelegate {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         
-        //    self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: ""), forBarMetrics: UIBarMetrics.Default)
-        //    self.navigationController?.navigationBar.shadowImage = UIImage(named: "")
-        
         self.navigationController?.navigationBar.barTintColor = hexmain
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!, NSForegroundColorAttributeName: UIColor.white]
         self.navigationController?.navigationBar.tintColor = colorWithHexString("#ffffff")

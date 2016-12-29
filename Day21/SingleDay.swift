@@ -104,8 +104,6 @@ class SingleDay: UIViewController, UITableViewDelegate, UITableViewDataSource {
         moreDetail.color = self.colors[(indexPath as NSIndexPath).row]
         moreDetail.key = "\(self.keys[(indexPath as NSIndexPath).row])"
         
-        //self.presentViewController(newEntry, animated: true, completion: nil)
-        // self.navigationController?.presentViewController(newEntry, animated: true, completion: nil)
         self.navigationController?.pushViewController(moreDetail, animated: true)
     }
     

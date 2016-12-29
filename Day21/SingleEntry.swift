@@ -15,7 +15,7 @@ class SingleEntry: UIViewController {
     var entryTitle = "No title"
     var key = "none"
     
-    var food = ["Gratitude 1", "Gratitude 2", "Gratitude 3", "Positive Experience 1", "Positive Experience 2", "Exercise", "Food", "Meditation", "Random Act of Kindness"]
+    var field = ["Gratitude 1", "Gratitude 2", "Gratitude 3", "Positive Experience 1", "Positive Experience 2", "Exercise", "Food", "Meditation", "Random Act of Kindness"]
     var typeKeys = ["grat1", "grat2", "grat3", "post1", "post2", "exercise", "food", "meditation", "raok"]
     
     @IBOutlet weak var entryText: UITextView!
@@ -28,16 +28,13 @@ class SingleEntry: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         
-        //    self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: ""), forBarMetrics: UIBarMetrics.Default)
-        //    self.navigationController?.navigationBar.shadowImage = UIImage(named: "")
-        
         self.navigationController?.navigationBar.barTintColor = color
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!, NSForegroundColorAttributeName: UIColor.white]
         self.navigationController?.navigationBar.tintColor = colorWithHexString("#ffffff")
         navigationController?.hidesBarsOnSwipe = false
     
         let index = typeKeys.index(of: key)
-        self.title = self.food[index!]
+        self.title = self.field[index!]
         
         self.view.backgroundColor = color
         
@@ -62,14 +59,5 @@ class SingleEntry: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
