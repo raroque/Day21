@@ -10,7 +10,7 @@ This was the first paid app I released to the app store, but I've made it free (
 
 Day21 is now part of [Everfit](http://everfit.co), a project I started to help improve and promote overall well-being for as many people as possible. This app helped me significantly and I want it to reach as many people as possible, so I've made it free. 
 
-I've also decided to release the code to help anyone who wants to learn to code. The best way to learn how to code is to code. Download the project and modify it as much as you want (for example, you can change the colors if the current colors don't fit your style). Fair warning, I'm still learning (and I'm not a CS major) so the style is probably not the best (I'll be going in and cleaning it from time to time). However, if you make any changes (or fix any bugs) you think would benefit everyone, let me know. I want to get better too :)
+I've also decided to release the code so that anybody can make the app better as well as help anyone who wants to learn to code. The best way to learn how to code is to code. Download the project and modify it as much as you want (for example, you can change the colors if the current colors don't fit your style). Fair warning, I'm still learning (and I'm not a CS major) so the style is probably not the best (I'll be going in and cleaning it from time to time). However, if you make any changes (or fix any bugs) you think would benefit everyone, let me know. I want to get better too :)
 
 ### Everfit
 
